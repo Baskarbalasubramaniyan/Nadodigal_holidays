@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadodigal Holidays | Premium South India Travel & Tour Packages</title>
+    <meta name="description" content="Nadodigal Holidays offers customized tour packages for college students, families, corporate groups and travellers across South India.">
+    <meta name="keywords" content="Nadodigal Holidays, South India Tours, Munnar Packages, College IV Trips, Kerala Tourism, Ooty Tour Packages">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#064E3B',
+                            dark: '#042F2E',
+                            secondary: '#0F766E',
+                            accent: '#10B981',
+                            subtle: '#D1FAE5',
+                            bg: '#F0FDF4',
+                            gold: '#F59E0B',
+                            goldDark: '#D97706',
+                            text: '#0F172A',
+                            white:'#FFF',
+                            orange:'#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        dancing: ['"Dancing Script"', 'cursive'],
+                        lobster: ['"Lobster Two"', 'cursive'],
+                        vibes: ['"Great Vibes"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Lobster+Two:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style Adjustments -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #0F172A;
+            background-color: #F0FDF4;
+            overflow-x: hidden;
+        }
+
+        .font-dancing { font-family: 'Dancing Script', cursive; }
+        .font-lobster { font-family: 'Lobster Two', cursive; }
+        .font-vibes { font-family: 'Great Vibes', cursive; }
+
+        .glass-nav {
+            background: rgba(6, 78, 59, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(209, 250, 229, 0.5);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(4, 47, 46, 0.75) 0%, rgba(6, 78, 59, 0.85) 100%);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .badge-pulse {
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F0FDF4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0F766E;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #064E3B;
+        }
+
+        .tab-btn.active {
+            background-color: #064E3B;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.25);
+        }
+
+        /* Toast Animation */
+        #toast {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        #toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        #toast.hide {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hide opacity-0 pointer-events-none flex items-center gap-3 bg-brand-dark text-white px-6 py-4 rounded-2xl shadow-2xl border border-brand-accent/30 max-w-md w-[90%]">
+        <div id="toast-icon" class="w-8 h-8 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center text-lg shrink-0">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <p id="toast-message" class="text-sm font-medium">Notification message here</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-nav shadow-lg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-white to-green-100 text-brand-dark flex items-center justify-center text-2xl font-bold  transform group-hover:rotate-6 transition-transform">
+                    <img src="./Assest/logo-removebg-preview.png" alt="">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight font-poppins text-white leading-none">
+                        Nadodigal
+                    </span>
+                    <span class="text-xs font-dancing text-brand-gold tracking-widest leading-tight">
+                        Holidays & Tours
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                <a href="#home" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors text-brand-gold">Home</a>
+                <a href="#about" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors">About Us</a>
+                <a href="#services" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors">Services</a>
+                <a href="#destinations" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors">Destinations</a>
+                <a href="#packages" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors">Packages</a>
+                <a href="#gallery" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors">Gallery</a>
+                <a href="#contact" class="nav-link px-3 py-2 rounded-lg text-sm font-medium hover:text-brand-gold transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA Desktop -->
+            <div class="hidden md:flex items-center">
+                <a href="#enquire" class="bg-gradient-to-r from-brand-gold to-brand-goldDark text-brand-dark font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-brand-gold/30 hover:scale-105 transition-all text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                    <span>Plan Your Trip</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-white hover:bg-brand-secondary/40 focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i id="hamburger-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-drawer" class="hidden md:hidden bg-brand-dark/95 border-b border-brand-secondary/30 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-brand-gold hover:bg-brand-primary/50">Home</a>
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium hover:bg-brand-primary/50">About Us</a>
+            <a href="#services" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium hover:bg-brand-primary/50">Services</a>
+            <a href="#destinations" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium hover:bg-brand-primary/50">Destinations</a>
+            <a href="#packages" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium hover:bg-brand-primary/50">Packages</a>
+            <a href="#gallery" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium hover:bg-brand-primary/50">Gallery</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium hover:bg-brand-primary/50">Contact</a>
+            <div class="pt-2">
+                <a href="#enquire" class="mobile-link w-full text-center bg-gradient-to-r from-brand-gold to-brand-goldDark text-brand-dark font-semibold py-3 rounded-xl shadow-md block">
+                    <i class="fa-solid fa-paper-plane mr-2 text-sm"></i> Plan Your Trip
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="./Assest/bg2.png" alt="Kerala Backwaters Nadodigal Holidays" class="w-full h-full object-cover object-center scale-105 transform  transition-all duration-[10000ms]" onerror="this.src='https://placehold.co/1920x1080/064E3B/FFF?text=South+India+Travel'">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-8 mt-6">
+            
+            <!-- Script Badge -->
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-brand-primary/60 border border-brand-accent/40 backdrop-blur-md badge-pulse">
+                <i class="fa-solid fa-sparkles text-brand-gold text-sm"></i>
+                <span class="font-dancing text-xl sm:text-2xl font-bold text-brand-gold tracking-wide">
+                    Explore • Travel • Create Memories
+                </span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
+                Your Next Adventure <br class="hidden sm:inline">
+                <span class="font-lobster font-normal gold-gradient-text">Starts Right Here</span>
+            </h1>
+
+            <!-- Supporting Text -->
+            <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-200 font-light leading-relaxed">
+                Handcrafted South India tours, College IVs, Corporate Escapes, and Custom Family Vacation Packages tailored for memories that last a lifetime.
+            </p>
+
+            <!-- Hero Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+                <a href="#enquire" class="w-full sm:w-auto bg-gradient-to-r from-brand-gold to-brand-goldDark text-brand-dark font-bold px-8 py-4 rounded-full shadow-2xl hover:shadow-brand-gold/50 hover:-translate-y-1 transition-all text-base flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Plan Your Trip</span>
+                </a>
+                <a href="#packages" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:-translate-y-1 transition-all text-base flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-compass text-brand-gold"></i>
+                    <span>Explore Packages</span>
+                </a>
+            </div>
+
+            <!-- Quick Filter Bar Widget -->
+            <div class="pt-8">
+                <div class="bg-white/95 backdrop-blur-lg text-brand-dark p-4 sm:p-6 rounded-3xl shadow-2xl border border-brand-subtle/80 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                    <div>
+                        <label class="block text-xs font-bold text-brand-primary uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-location-dot text-brand-gold mr-1"></i> Destination
+                        </label>
+                        <select id="hero-dest" class="w-full bg-brand-bg/80 border border-brand-secondary/20 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                            <option value="">All South India</option>
+                            <option value="Munnar">Munnar, Kerala</option>
+                            <option value="Ooty">Ooty, Tamil Nadu</option>
+                            <option value="Kodaikanal">Kodaikanal, Tamil Nadu</option>
+                            <option value="Alleppey">Alleppey Backwaters</option>
+                            <option value="Coorg">Coorg, Karnataka</option>
+                            <option value="Wayanad">Wayanad, Kerala</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-brand-primary uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-users text-brand-gold mr-1"></i> Travel Type
+                        </label>
+                        <select id="hero-type" class="w-full bg-brand-bg/80 border border-brand-secondary/20 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                            <option value="">Any Type</option>
+                            <option value="College IV">College IV Tour</option>
+                            <option value="Family Trip">Family Vacation</option>
+                            <option value="Corporate Tour">Corporate Escape</option>
+                            <option value="Devotional Trip">Devotional Journey</option>
+                            <option value="Friends / Group Trip">Friends Group</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-brand-primary uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-clock text-brand-gold mr-1"></i> Duration
+                        </label>
+                        <select id="hero-duration" class="w-full bg-brand-bg/80 border border-brand-secondary/20 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                            <option value="">Any Days</option>
+                            <option value="2-3">2 - 3 Days</option>
+                            <option value="4-5">4 - 5 Days</option>
+                            <option value="6+">6+ Days</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-end">
+                        <button onclick="handleHeroSearch()" class="w-full bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2.5 px-4 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-magnifying-glass text-brand-gold"></i>
+                            <span>Search Tours</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-brand-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Asymmetric Image Collage -->
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80" alt="South India Tourism Experience" class="w-full h-[380px] sm:h-[480px] object-cover hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/064E3B/FFF?text=Travel+Experience'">
+                    </div>
+                    
+                    <!-- Floating Badge Card -->
+                    <div class="absolute -bottom-6 -right-2 sm:bottom-6 sm:-right-6 z-20 bg-white p-5 rounded-2xl shadow-xl border border-brand-subtle max-w-[240px] flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-subtle text-brand-primary flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-dark text-lg leading-tight">100% Verified</h4>
+                            <p class="text-xs text-gray-500 mt-1">Stays & Drivers</p>
+                        </div>
+                    </div>
+
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-brand-accent/20 rounded-full blur-2xl -z-0"></div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="space-y-6">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-brand-subtle text-brand-primary text-xs font-bold uppercase tracking-widest">
+                        Welcome to Nadodigal Holidays
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-dark leading-tight">
+                        Crafting Unforgettable <span class="font-lobster font-normal text-brand-primary">South Indian Journeys</span>
+                    </h2>
+
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        At <strong class="text-brand-primary">Nadodigal Holidays</strong>, travel is not just about visiting places—it's about creating stories. We specialize in custom-tailored, stress-free travel itineraries for college groups, corporate teams, families, and solo wanderers across South India.
+                    </p>
+
+                    <!-- Target Audiences Pills -->
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="bg-white border border-brand-secondary/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brand-primary shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-graduation-cap text-brand-gold"></i> College Students
+                        </span>
+                        <span class="bg-white border border-brand-secondary/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brand-primary shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-people-roof text-brand-gold"></i> Families
+                        </span>
+                        <span class="bg-white border border-brand-secondary/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brand-primary shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-briefcase text-brand-gold"></i> Corporate Groups
+                        </span>
+                        <span class="bg-white border border-brand-secondary/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-brand-primary shadow-sm flex items-center gap-1.5">
+                            <i class="fa-solid fa-gopuram text-brand-gold"></i> Devotional Groups
+                        </span>
+                    </div>
+
+                    <!-- 4 Main Feature Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm hover:border-brand-accent transition-colors flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-bg text-brand-primary flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-brand-dark">Customized Itineraries</h3>
+                                <p class="text-xs text-gray-500 mt-1">Flexible schedules built around your personal preferences.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm hover:border-brand-accent transition-colors flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-bg text-brand-primary flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-brand-dark">Verified Hotels & Resorts</h3>
+                                <p class="text-xs text-gray-500 mt-1">Safe, hygienic, and highly-rated accommodations.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm hover:border-brand-accent transition-colors flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-bg text-brand-primary flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-bus text-brand-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-brand-dark">Comfort Vehicles</h3>
+                                <p class="text-xs text-gray-500 mt-1">AC Coaches, Travellers & Cars with experienced drivers.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm hover:border-brand-accent transition-colors flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-bg text-brand-primary flex items-center justify-center shrink-0 font-bold">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-brand-dark">Transparent Pricing</h3>
+                                <p class="text-xs text-gray-500 mt-1">No hidden charges, honest budget options for every group.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#enquire" class="inline-flex items-center gap-2 bg-brand-primary text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg hover:bg-brand-dark transition-all text-sm">
+                            <span>Plan Your Trip With Us</span>
+                            <i class="fa-solid fa-arrow-right text-brand-gold text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-brand-subtle px-3 py-1 rounded-full">Our Expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                    Comprehensive <span class="font-dancing font-normal text-brand-orange">Travel Services</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    From single transfers to full-fledged end-to-end industrial tours, we manage every detail with excellence.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-brand-bg/60 p-6 rounded-3xl border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-gold flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">College IV Tours</h3>
+                    <p class="text-gray-600 text-sm mb-4">High-energy Industrial Visits (IV) with DJ nights, campfire, factory visits, and full safety supervision.</p>
+                    <ul class="text-xs text-gray-500 space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Factory & Industry Permissions</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Luxury Sleeper / Semi-Sleeper Buses</li>
+                    </ul>
+                    <a href="#enquire" onclick="setEnquireSubject('College IV Tours')" class="text-xs font-bold text-brand-primary group-hover:text-brand-accent flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-bg/60 p-6 rounded-3xl border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-gold flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Family Trip Packages</h3>
+                    <p class="text-gray-600 text-sm mb-4">Relaxed, memorable family holidays with kid-friendly stays, private cabs, and peaceful sight-seeing schedules.</p>
+                    <ul class="text-xs text-gray-500 space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Hill Stations & Backwater Resorts</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Customized Food Options</li>
+                    </ul>
+                    <a href="#enquire" onclick="setEnquireSubject('Family Trip Packages')" class="text-xs font-bold text-brand-primary group-hover:text-brand-accent flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-bg/60 p-6 rounded-3xl border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-gold flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Corporate Tours</h3>
+                    <p class="text-gray-600 text-sm mb-4">Team bonding retreats, annual outbound trips, and executive getaways with conference facilities.</p>
+                    <ul class="text-xs text-gray-500 space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Team Building Activities</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> GST Billing & Corporate Rates</li>
+                    </ul>
+                    <a href="#enquire" onclick="setEnquireSubject('Corporate Tours')" class="text-xs font-bold text-brand-primary group-hover:text-brand-accent flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-brand-bg/60 p-6 rounded-3xl border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-gold flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fa-solid fa-gopuram"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Devotional Trips</h3>
+                    <p class="text-gray-600 text-sm mb-4">Comfortable pilgrimage tours to Tirupati, Rameshwaram, Madurai, Kanyakumari, Sabarimala & more.</p>
+                    <ul class="text-xs text-gray-500 space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Special Darshan Guidance</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Elderly-friendly Transportation</li>
+                    </ul>
+                    <a href="#enquire" onclick="setEnquireSubject('Devotional Trips')" class="text-xs font-bold text-brand-primary group-hover:text-brand-accent flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-brand-bg/60 p-6 rounded-3xl border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-gold flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fa-solid fa-hotel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Hotel & Resort Booking</h3>
+                    <p class="text-gray-600 text-sm mb-4">Direct tie-ups with premium 3-Star, 5-Star resorts, plantation homestays, and budget hotels.</p>
+                    <ul class="text-xs text-gray-500 space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Exclusive B2B Negotiated Rates</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Verified Cleanliness Standards</li>
+                    </ul>
+                    <a href="#enquire" onclick="setEnquireSubject('Hotel & Resort Booking')" class="text-xs font-bold text-brand-primary group-hover:text-brand-accent flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-brand-bg/60 p-6 rounded-3xl border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-gold flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform shadow-md">
+                        <i class="fa-solid fa-van-shuttle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-dark mb-2">Bus / Car / Traveller Rentals</h3>
+                    <p class="text-gray-600 text-sm mb-4">Well-maintained fleets including 12/26 Seater Tempo Travellers, Volvo AC Buses, Swift, Innova & Ertiga.</p>
+                    <ul class="text-xs text-gray-500 space-y-1.5 mb-5">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Professional Uniformed Drivers</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> All-India Tourist Permit</li>
+                    </ul>
+                    <a href="#enquire" onclick="setEnquireSubject('Bus / Car Rentals')" class="text-xs font-bold text-brand-primary group-hover:text-brand-accent flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-20 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="space-y-2">
+                    <span class="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-white px-3 py-1 rounded-full shadow-sm">Popular Hotspots</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                        Top <span class="font-dancing font-normal text-brand-orange">South Indian Destinations</span>
+                    </h2>
+                </div>
+                <p class="text-gray-600 text-sm max-w-md mt-2 md:mt-0">
+                    Handpicked picturesque locations across Kerala, Tamil Nadu, Karnataka & beyond.
+                </p>
+            </div>
+
+            <!-- Asymmetric Responsive Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Destination 1: Munnar -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group h-80">
+                    <img src="./Assest/munnar.png" alt="Munnar Tea Gardens" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/064E3B/FFF?text=Munnar'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-md">Kerala</span>
+                        <h3 class="text-2xl font-bold mt-2">Munnar</h3>
+                        <p class="text-xs text-gray-200 mt-1 line-clamp-2">Mist-clad tea plantations, waterfalls, and chilly weather.</p>
+                        <button onclick="filterDestination('Munnar')" class="mt-4 text-xs font-bold text-white bg-brand-primary hover:bg-brand-accent px-4 py-2 rounded-xl transition-colors inline-flex items-center gap-1">
+                            Explore Packages <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 2: Vagamon -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group h-80">
+                    <img src="./Assest/vagamon.png" alt="Vagamon Pine Forest" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/064E3B/FFF?text=Vagamon'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-md">Kerala</span>
+                        <h3 class="text-2xl font-bold mt-2">Vagamon</h3>
+                        <p class="text-xs text-gray-200 mt-1 line-clamp-2">Lush green meadows, pine forests, and serene offbeat escapes.</p>
+                        <button onclick="filterDestination('Vagamon')" class="mt-4 text-xs font-bold text-white bg-brand-primary hover:bg-brand-accent px-4 py-2 rounded-xl transition-colors inline-flex items-center gap-1">
+                            Explore Packages <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 3: Ooty -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group h-80">
+                    <img src="./Assest/ooty.png" alt="Ooty Hills" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/064E3B/FFF?text=Ooty'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-md">Tamil Nadu</span>
+                        <h3 class="text-2xl font-bold mt-2">Ooty</h3>
+                        <p class="text-xs text-gray-200 mt-1 line-clamp-2">Queen of Hill Stations with toy train, botanical gardens & Nilgiri views.</p>
+                        <button onclick="filterDestination('Ooty')" class="mt-4 text-xs font-bold text-white bg-brand-primary hover:bg-brand-accent px-4 py-2 rounded-xl transition-colors inline-flex items-center gap-1">
+                            Explore Packages <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 4: Kodaikanal -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group h-80">
+                    <img src="./Assest/kodaikanal.png" alt="Kodaikanal Lake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/064E3B/FFF?text=Kodaikanal'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-md">Tamil Nadu</span>
+                        <h3 class="text-2xl font-bold mt-2">Kodaikanal</h3>
+                        <p class="text-xs text-gray-200 mt-1 line-clamp-2">Princess of Hill Stations, star lake, Pillar Rocks, and pine forests.</p>
+                        <button onclick="filterDestination('Kodaikanal')" class="mt-4 text-xs font-bold text-white bg-brand-primary hover:bg-brand-accent px-4 py-2 rounded-xl transition-colors inline-flex items-center gap-1">
+                            Explore Packages <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 5: Alleppey -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group h-80">
+                    <img src="./Assest/alleppy.png" alt="Alleppey Houseboat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/064E3B/FFF?text=Alleppey'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-md">Kerala</span>
+                        <h3 class="text-2xl font-bold mt-2">Alleppey</h3>
+                        <p class="text-xs text-gray-200 mt-1 line-clamp-2">Venice of the East featuring luxury houseboat backwater cruises.</p>
+                        <button onclick="filterDestination('Alleppey')" class="mt-4 text-xs font-bold text-white bg-brand-primary hover:bg-brand-accent px-4 py-2 rounded-xl transition-colors inline-flex items-center gap-1">
+                            Explore Packages <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Destination 6: Coorg -->
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group h-80">
+                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80" alt="Coorg Coffee Estate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x800/064E3B/FFF?text=Coorg'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-gold bg-black/40 px-2.5 py-1 rounded-full backdrop-blur-md">Karnataka</span>
+                        <h3 class="text-2xl font-bold mt-2">Coorg</h3>
+                        <p class="text-xs text-gray-200 mt-1 line-clamp-2">Scotland of India with aromatic coffee plantations & Abbey Falls.</p>
+                        <button onclick="filterDestination('Coorg')" class="mt-4 text-xs font-bold text-white bg-brand-primary hover:bg-brand-accent px-4 py-2 rounded-xl transition-colors inline-flex items-center gap-1">
+                            Explore Packages <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages Section -->
+    <section id="packages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-10">
+                <span class="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-brand-subtle px-3 py-1 rounded-full">Curated Experiences</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                    Best Selling <span class="font-dancing font-normal text-brand-orange">Tour Packages</span>
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    Select a region or travel category to explore verified itineraries with transparent pricing.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                <button onclick="filterPackages('all')" class="tab-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
+                    All Packages
+                </button>
+                <button onclick="filterPackages('kerala')" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
+                    Kerala
+                </button>
+                <button onclick="filterPackages('tamilnadu')" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
+                    Tamil Nadu
+                </button>
+                <button onclick="filterPackages('karnataka')" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
+                    Karnataka
+                </button>
+                <button onclick="filterPackages('college')" class="tab-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-gray-100 text-gray-700 hover:bg-gray-200">
+                    College IV Special
+                </button>
+            </div>
+
+            <!-- Package Cards Container -->
+            <div id="package-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will inject packages here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Details Modal -->
+    <div id="package-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-brand-dark/80 backdrop-blur-md">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-brand-subtle flex flex-col">
+            <div class="relative h-56 sm:h-64 shrink-0">
+                <img id="modal-img" src="" alt="Package Detail" class="w-full h-full object-cover">
+                <button onclick="closePackageModal()" class="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white w-9 h-9 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="absolute bottom-4 left-4 bg-brand-primary/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-brand-gold">
+                    <span id="modal-category">Kerala</span>
+                </div>
+            </div>
+
+            <div class="p-6 space-y-5">
+                <div class="flex justify-between items-start gap-4">
+                    <div>
+                        <h3 id="modal-title" class="text-2xl font-extrabold text-brand-dark">Munnar Magic Experience</h3>
+                        <p id="modal-duration" class="text-xs font-medium text-brand-secondary mt-1">3 Days / 2 Nights</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-400">Starting from</span>
+                        <p id="modal-price" class="text-xl font-extrabold text-brand-primary">₹3,999</p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 pt-3">
+                    <h4 class="text-xs font-bold text-brand-primary uppercase tracking-wider mb-2">Overview</h4>
+                    <p id="modal-overview" class="text-xs text-gray-600 leading-relaxed">Detailed itinerary details here...</p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-brand-primary uppercase tracking-wider mb-2">Highlights</h4>
+                    <ul id="modal-highlights" class="text-xs text-gray-600 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        <!-- injected -->
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-brand-bg p-4 rounded-2xl">
+                    <div>
+                        <h4 class="text-xs font-bold text-brand-primary uppercase tracking-wider mb-1">Inclusions</h4>
+                        <p id="modal-inclusions" class="text-xs text-gray-600">Breakfast, Hotel Stay, Cab transfers</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-red-600 uppercase tracking-wider mb-1">Exclusions</h4>
+                        <p id="modal-exclusions" class="text-xs text-gray-600">Personal Expenses, Entry Tickets</p>
+                    </div>
+                </div>
+
+                <div class="pt-2 flex justify-end gap-3">
+                    <button onclick="closePackageModal()" class="px-5 py-2.5 rounded-xl border border-gray-300 text-xs font-bold text-gray-600 hover:bg-gray-50">Close</button>
+                    <button id="modal-enquire-btn" class="px-6 py-2.5 rounded-xl bg-brand-primary hover:bg-brand-dark text-white text-xs font-bold shadow-md">Enquire This Package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+                <span class="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-white px-3 py-1 rounded-full shadow-sm">Captured Moments</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                    Our Travel <span class="font-dancing font-normal text-brand-orange">Gallery</span>
+                </h2>
+                <p class="text-gray-600 text-sm">Real pictures from our happy travellers, college IVs, and scenic routes.</p>
+            </div>
+
+            <!-- Responsive Masonry Style Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1200&q=80', 'Vagamon')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_1.jpg" alt="Munnar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Vagamon</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80', 'Alleppey Backwaters')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_2.jpg" alt="Alleppey" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Alleppey Houseboat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80', 'Ooty Lake')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_3.jpg" alt="Ooty" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Ooty Hills</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80', 'Coorg Coffee')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_4.jpg" alt="Coorg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Coorg Estates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80', 'Coorg Coffee')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_5.jpg" alt="Coorg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Coorg Estates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80', 'Coorg Coffee')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_6.jpg" alt="Coorg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Coorg Estates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80', 'Coorg Coffee')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_7.jpg" alt="Coorg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Coorg Estates</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div onclick="openLightbox('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80', 'Coorg Coffee')" class="relative rounded-2xl overflow-hidden cursor-pointer group h-52 sm:h-64 shadow-md">
+                    <img src="./Assest/trip_8.jpg" alt="Coorg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white p-4 text-center">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass-plus text-2xl mb-1 text-brand-gold"></i>
+                            <p class="text-xs font-bold">Coorg Estates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 flex flex-col items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-brand-gold">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] rounded-2xl shadow-2xl object-contain">
+        <p id="lightbox-caption" class="text-white font-medium text-sm mt-4"></p>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <span class="text-brand-gold text-xs font-bold uppercase tracking-widest bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">Why Nadodigal Holidays</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+                        Your Trusted <br><span class="gold-gradient-text font-lobster font-normal">Travel Companion</span>
+                    </h2>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                        We take complete ownership of your travel experience. From booking comfortable vehicles and vetted hotels to handling itinerary logistics, we ensure seamless trips every time.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-primary text-brand-gold flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white">Safe & Secure Travel</h3>
+                                <p class="text-xs text-gray-400 mt-0.5">Strict safety protocols for college IV trips and family journeys.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-primary text-brand-gold flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white">24/7 On-Tour Support</h3>
+                                <p class="text-xs text-gray-400 mt-0.5">Dedicated trip coordinator assigned to your group throughout the journey.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-primary text-brand-gold flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-white">Affordable & Honest Rates</h3>
+                                <p class="text-xs text-gray-400 mt-0.5">Custom budget plans with complete cost breakdowns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Counters Grid -->
+                <div class="grid grid-cols-2 gap-6 bg-brand-primary/40 p-6 sm:p-8 rounded-3xl border border-brand-accent/20 backdrop-blur-md">
+                    <div class="bg-brand-dark/80 p-6 rounded-2xl border border-white/5 text-center">
+                        <i class="fa-solid fa-face-smile text-3xl text-brand-gold mb-2"></i>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white"><span class="counter" data-target="500">0</span>+</h3>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Happy Travellers</p>
+                    </div>
+
+                    <div class="bg-brand-dark/80 p-6 rounded-2xl border border-white/5 text-center">
+                        <i class="fa-solid fa-route text-3xl text-brand-accent mb-2"></i>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white"><span class="counter" data-target="200">0</span>+</h3>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Successful Trips</p>
+                    </div>
+
+                    <div class="bg-brand-dark/80 p-6 rounded-2xl border border-white/5 text-center">
+                        <i class="fa-solid fa-map-location-dot text-3xl text-brand-accent mb-2"></i>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white"><span class="counter" data-target="50">0</span>+</h3>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Destinations</p>
+                    </div>
+
+                    <div class="bg-brand-dark/80 p-6 rounded-2xl border border-white/5 text-center">
+                        <i class="fa-solid fa-star text-3xl text-brand-gold mb-2"></i>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-white"><span class="counter" data-target="99">0</span>%</h3>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Satisfaction Rate</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Enquiry Form Section -->
+    <section id="enquire" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-bg p-6 sm:p-10 rounded-3xl border border-brand-subtle shadow-xl">
+                
+                <div class="text-center space-y-2 mb-8">
+                    <span class="text-brand-primary font-bold text-xs uppercase tracking-widest bg-white px-3 py-1 rounded-full border border-brand-subtle">Instant WhatsApp Booking</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                        Plan Your <span class="font-lobster font-normal text-brand-primary">Dream Vacation</span>
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-600">Fill in your requirements below to instantly generate a formatted WhatsApp enquiry.</p>
+                </div>
+
+                <form id="whatsapp-form" onsubmit="handleWhatsAppFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Full Name *</label>
+                            <input type="text" id="form-name" required placeholder="Baskar" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Mobile Number *</label>
+                            <input type="tel" id="form-mobile" required placeholder="+91 9025236592"  class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Email Address -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Email Address</label>
+                            <input type="email" id="form-email" placeholder="nadodigalholidays@gmail.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Travel Type -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Travel Type *</label>
+                            <select id="form-type" required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                                <option value="">Select Category</option>
+                                <option value="College IV">College IV Tour</option>
+                                <option value="Family Trip">Family Trip</option>
+                                <option value="Corporate Tour">Corporate Tour</option>
+                                <option value="Devotional Trip">Devotional Trip</option>
+                                <option value="Friends / Group Trip">Friends / Group Trip</option>
+                                <option value="Custom Package">Custom Package</option>
+                            </select>
+                        </div>
+
+                        <!-- Preferred Destination -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Preferred Destination *</label>
+                            <input type="text" id="form-destination" required placeholder="e.g. Munnar, Ooty, Wayanad" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Travel Date -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Travel Date *</label>
+                            <input type="date" id="form-date" required class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Number of Travellers -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Number of Travellers *</label>
+                            <input type="number" id="form-travellers" min="1" required placeholder="e.g. 4 or 45" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Duration -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Duration (Days)</label>
+                            <input type="text" id="form-duration" placeholder="e.g. 3 Days / 2 Nights" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                        <!-- Budget Range -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Budget Range</label>
+                            <select id="form-budget" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                                <option value="Flexible">Flexible Budget</option>
+                                <option value="₹3,000 - ₹6,000 per head">₹3,000 - ₹6,000 / head</option>
+                                <option value="₹6,000 - ₹12,000 per head">₹6,000 - ₹12,000 / head</option>
+                                <option value="₹12,000+ per head">₹12,000+ Premium</option>
+                            </select>
+                        </div>
+
+                        <!-- Pickup Location -->
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Pickup Location</label>
+                            <input type="text" id="form-pickup" placeholder="e.g. Coimbatore, Chennai, Madurai" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary">
+                        </div>
+
+                    </div>
+
+                    <!-- Requirements Text -->
+                    <div>
+                        <label class="block text-xs font-bold text-brand-dark uppercase mb-1">Specific Requirements / Message</label>
+                        <textarea id="form-requirements" rows="3" placeholder="Tell us about accommodation preferences, vehicle choice, food preference, etc..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-gradient-to-r from-emerald-600 to-green-700 hover:from-emerald-700 hover:to-green-800 text-white font-bold py-4 rounded-2xl shadow-xl flex items-center justify-center gap-3 text-base transition-all transform active:scale-95">
+                        <i class="fa-brands fa-whatsapp text-2xl text-green-300"></i>
+                        <span>Send Enquiry on WhatsApp</span>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-brand-bg border-t border-brand-subtle">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Details -->
+                <div class="space-y-6">
+                    <span class="text-brand-secondary font-bold text-xs uppercase tracking-widest bg-white px-3 py-1 rounded-full shadow-sm">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                        We are Here to <span class="font-dancing font-normal text-brand-orange">Help You Plan</span>
+                    </h2>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Have questions about our itineraries, group discounts, or custom bookings? Contact our friendly team today.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-brand-subtle text-brand-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase">Phone Call</p>
+                                <a href="tel:+919025236592" class="text-base font-bold text-brand-dark hover:text-brand-primary">+91 90252 36592</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-brand-subtle text-brand-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase">Email Address</p>
+                                <a href="mailto:nadodigalholidays@gmail.com" class="text-base font-bold text-brand-dark hover:text-brand-primary">nadodigalholidays@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-brand-subtle shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-brand-subtle text-brand-primary flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase">Headquarters</p>
+                                <p class="text-sm font-bold text-brand-dark">Coimbatore, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4">
+                    <a href="#home" class="flex items-center gap-3">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-white to-green-100 text-brand-dark flex items-center justify-center text-2xl font-bold  transform group-hover:rotate-6 transition-transform">
+                            <img src="./Assest/logo-removebg-preview.png" alt="">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xl sm:text-2xl font-extrabold tracking-tight font-poppins text-white leading-none">
+                                Nadodigal</span>
+                            <span class="text-xl font-dancing  text-brand-gold tracking-widest leading-tight">
+                                Holidays & Tours
+                            </span>
+                        </div>
+                    </a>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Handcrafted South India tours, College IVs, Corporate Escapes, and Custom Family Vacation Packages tailored for memories that last a lifetime.
+                    </p>
+                    <div class="flex gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-dark text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-dark text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919025236592" class="w-9 h-9 rounded-full bg-white/10 hover:bg-green-500 text-white flex items-center justify-center transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-brand-gold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#home" class="hover:text-brand-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Our Services</a></li>
+                        <li><a href="#destinations" class="hover:text-brand-gold transition-colors">Top Destinations</a></li>
+                        <li><a href="#packages" class="hover:text-brand-gold transition-colors">Tour Packages</a></li>
+                        <li><a href="#gallery" class="hover:text-brand-gold transition-colors">Photo Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tour Services -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-brand-gold mb-4">Tour Categories</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">College IV Trips</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Family Packages</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Corporate Retreats</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Devotional Tours</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition-colors">Vehicle Rentals</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-brand-gold mb-4">Contact Info</h4>
+                    <p class="text-xs text-gray-300"><i class="fa-solid fa-phone text-brand-gold mr-2"></i> +91 90252 36592</p>
+                    <p class="text-xs text-gray-300"><i class="fa-solid fa-envelope text-brand-gold mr-2"></i> nadodigalholidays@gmail.com</p>
+                    <p class="text-xs text-gray-300"><i class="fa-solid fa-location-dot text-brand-gold mr-2"></i> South India Tourism Operator</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 text-center text-xs text-gray-500">
+                © 2026 Nadodigal Holidays. All Rights Reserved. Crafted for unforgettable memories.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/919025236592?text=Hello%20Nadodigal%20Holidays%2C%20I%20would%20like%20to%20enquire%20about%20a%20tour%20package." target="_blank" class="fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-3xl group transition-all transform hover:scale-110" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <!-- Ping ring effect -->
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-brand-gold"></span>
+        </span>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-brand-dark text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-white/10">
+            Chat with Us
+        </span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-24 right-6 z-30 bg-brand-primary text-brand-gold w-10 h-10 rounded-full shadow-lg hidden items-center justify-center text-lg hover:bg-brand-dark transition-all">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Single-File JavaScript App Controller -->
+    <script>
+        // Configuration Object
+        const CONFIG = {
+            whatsapp: "919025236592",
+            phone: "+91 90252 36592",
+            email: "nadodigalholidays@gmail.com",
+            instagram: "#",
+            facebook: "#"
+        };
+
+        // Tour Packages Database
+        const PACKAGES = [
+            {
+                id: "p1",
+                category: "kerala",
+                title: "Munnar Misty Wonders",
+                duration: "3 Days / 2 Nights",
+                price: "₹3,999",
+                img: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80",
+                overview: "Experience mist-covered hills, tea garden walks, Mattupetty dam boat rides, and crisp mountain air in Munnar.",
+                highlights: ["Mattupetty Dam & Echo Point", "Tea Museum Visit", "Eravikulam National Park", "Campfire & Music"],
+                inclusions: "Accommodation, Breakfast, Sightseeing Cab",
+                exclusions: "Personal expenses, entry passes"
+            },
+            {
+                id: "p2",
+                category: "kerala",
+                title: "Alleppey Houseboat Bliss",
+                duration: "2 Days / 1 Night",
+                price: "₹4,999",
+                img: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80",
+                overview: "Glide through peaceful backwaters in a luxury traditional houseboat with traditional Kerala meals.",
+                highlights: ["Full Day Backwater Cruise", "Traditional Kerala Meals", "Sunset Sightseeing", "Coir Village Tour"],
+                inclusions: "Private Deluxe Houseboat, All Meals, Welcome Drink",
+                exclusions: "Transfers to Alleppey dock"
+            },
+            {
+                id: "p3",
+                category: "tamilnadu",
+                title: "Ooty & Coonoor Retreat",
+                duration: "3 Days / 2 Nights",
+                price: "₹4,200",
+                img: "https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=600&q=80",
+                overview: "Explore the Queen of Hill Stations including Botanical Gardens, Nilgiri Toy Train, and Sim's Park.",
+                highlights: ["Ooty Lake Boating", "Doddabetta Peak View", "Coonoor Tea Gardens", "Nilgiri Toy Train Ride"],
+                inclusions: "3-Star Hotel Stay, Breakfast, Local Transfers",
+                exclusions: "Lunch & Dinner"
+            },
+            {
+                id: "p4",
+                category: "tamilnadu",
+                title: "Kodaikanal Lake Escape",
+                duration: "3 Days / 2 Nights",
+                price: "₹3,800",
+                img: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80",
+                overview: "Relax by Kodakainal Star Lake, Pillar Rocks, Bryant Park, and Pine Forests with pleasant mountain breezes.",
+                highlights: ["Kodai Star Lake Boating", "Pillar Rocks & Coaker's Walk", "Pine Forest Exploration", "Campfire Night"],
+                inclusions: "Hotel Stay, Breakfast, Private Vehicle",
+                exclusions: "Personal purchases"
+            },
+            {
+                id: "p5",
+                category: "karnataka",
+                title: "Coorg Coffee Estate Tour",
+                duration: "3 Days / 2 Nights",
+                price: "₹4,500",
+                img: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=600&q=80",
+                overview: "Discover the Scotland of India with lush coffee plantation stays, Abbey Falls, and Raja's Seat sunsets.",
+                highlights: ["Abbey & Iruppu Waterfalls", "Namdroling Monastery", "Raja's Seat Sunset", "Coffee Plantation Walk"],
+                inclusions: "Resort Stay, Breakfast, Sightseeing",
+                exclusions: "Inter-state permit charges if applicable"
+            },
+            {
+                id: "p6",
+                category: "college",
+                title: "College IV: Munnar & Vagamon",
+                duration: "4 Days / 3 Nights",
+                price: "₹2,999",
+                img: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80",
+                overview: "High-voltage college IV tour loaded with DJ night, campfire, industry site visit, and adventure sports.",
+                highlights: ["Industrial Site Visit", "DJ Night & Sound Setup", "Offroad Jeep Safari", "Campfire & BBQ"],
+                inclusions: "AC Luxury Bus, Quad-sharing Stay, Breakfast & Dinner",
+                exclusions: "Individual shopping"
+            }
+        ];
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPackages('all');
+            initScrollSpy();
+            initCounters();
+            setupMobileMenu();
+        });
+
+        // Mobile Drawer Toggle
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const icon = document.getElementById('hamburger-icon');
+
+            btn.addEventListener('click', () => {
+                drawer.classList.toggle('hidden');
+                if (drawer.classList.contains('hidden')) {
+                    icon.classList.replace('fa-xmark', 'fa-bars');
+                } else {
+                    icon.classList.replace('fa-bars', 'fa-xmark');
+                }
+            });
+
+            // Close on link click
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    drawer.classList.add('hidden');
+                    icon.classList.replace('fa-xmark', 'fa-bars');
+                });
+            });
+        }
+
+        // Render Package Cards
+        function renderPackages(category) {
+            const grid = document.getElementById('package-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? PACKAGES 
+                : PACKAGES.filter(p => p.category === category);
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'bg-brand-bg/40 rounded-3xl overflow-hidden border border-brand-subtle hover:border-brand-accent hover:shadow-xl transition-all flex flex-col group';
+                card.innerHTML = `
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/064E3B/FFF?text=Tour+Package'">
+                        <span class="absolute top-4 left-4 bg-brand-primary text-brand-gold font-bold text-xs px-3 py-1 rounded-full uppercase shadow-md">${p.category}</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-xl font-bold text-brand-dark">${p.title}</h3>
+                            </div>
+                            <p class="text-xs text-brand-secondary font-semibold mt-1"><i class="fa-solid fa-clock text-brand-gold mr-1"></i> ${p.duration}</p>
+                            <p class="text-gray-600 text-xs mt-2 line-clamp-2">${p.overview}</p>
+                        </div>
+                        <div class="pt-2 border-t border-gray-200/60 flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] text-gray-400 font-bold uppercase">Starting From</span>
+                                <p class="text-lg font-extrabold text-brand-primary">${p.price}</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="openPackageModal('${p.id}')" class="px-3.5 py-2 rounded-xl bg-white border border-brand-secondary/30 text-xs font-bold text-brand-dark hover:bg-brand-subtle transition-colors">Details</button>
+                                <button onclick="setEnquireSubject('${p.title}')" class="px-3.5 py-2 rounded-xl bg-brand-primary text-white text-xs font-bold hover:bg-brand-dark transition-colors">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Package Category Filter Tabs
+        function filterPackages(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            renderPackages(category);
+        }
+
+        // Filter trigger from Destination section
+        function filterDestination(destName) {
+            document.getElementById('packages').scrollIntoView({ behavior: 'smooth' });
+            renderPackages('all');
+        }
+
+        // Package Details Modal Logic
+        function openPackageModal(id) {
+            const pkg = PACKAGES.find(p => p.id === id);
+            if (!pkg) return;
+
+            document.getElementById('modal-img').src = pkg.img;
+            document.getElementById('modal-category').innerText = pkg.category.toUpperCase();
+            document.getElementById('modal-title').innerText = pkg.title;
+            document.getElementById('modal-duration').innerText = pkg.duration;
+            document.getElementById('modal-price').innerText = pkg.price;
+            document.getElementById('modal-overview').innerText = pkg.overview;
+            document.getElementById('modal-inclusions').innerText = pkg.inclusions;
+            document.getElementById('modal-exclusions').innerText = pkg.exclusions;
+
+            const list = document.getElementById('modal-highlights');
+            list.innerHTML = '';
+            pkg.highlights.forEach(h => {
+                list.innerHTML += `<li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-brand-accent"></i> ${h}</li>`;
+            });
+
+            document.getElementById('modal-enquire-btn').onclick = () => {
+                closePackageModal();
+                setEnquireSubject(pkg.title);
+            };
+
+            document.getElementById('package-modal').classList.remove('hidden');
+        }
+
+        function closePackageModal() {
+            document.getElementById('package-modal').classList.add('hidden');
+        }
+
+        // Gallery Lightbox
+        function openLightbox(src, caption) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').innerText = caption;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        // Hero Search Redirect
+        function handleHeroSearch() {
+            const dest = document.getElementById('hero-dest').value;
+            const type = document.getElementById('hero-type').value;
+            const target = dest || type || 'Special Package';
+            setEnquireSubject(target);
+        }
+
+        function setEnquireSubject(subject) {
+            document.getElementById('enquire').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('form-destination').value = subject;
+        }
+
+        // Customer Enquiry WhatsApp Handler
+        function handleWhatsAppFormSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('form-name').value.trim();
+            const mobile = document.getElementById('form-mobile').value.trim();
+            const email = document.getElementById('form-email').value.trim() || 'N/A';
+            const type = document.getElementById('form-type').value;
+            const destination = document.getElementById('form-destination').value.trim();
+            const date = document.getElementById('form-date').value;
+            const travellers = document.getElementById('form-travellers').value;
+            const duration = document.getElementById('form-duration').value.trim() || 'Flexible';
+            const budget = document.getElementById('form-budget').value;
+            const pickup = document.getElementById('form-pickup').value.trim() || 'Not Specified';
+            const requirements = document.getElementById('form-requirements').value.trim() || 'Standard tour preferences.';
+
+            // Construct Beautiful WhatsApp Message
+            const message = 
+`Hello Nadodigal Holidays 👋
+I would like to enquire about a tour package.
+
+━━━━━━━━━━━━━━━━
+CUSTOMER DETAILS
+━━━━━━━━━━━━━━━━
+👤 Name: ${name}
+📞 Mobile: ${mobile}
+📧 Email: ${email}
+🚌 Travel Type: ${type}
+📍 Destination: ${destination}
+📅 Travel Date: ${date}
+👥 Travellers: ${travellers}
+⏱️ Duration: ${duration}
+💰 Budget: ${budget}
+🚗 Pickup Location: ${pickup}
+
+📝 Requirements:
+${requirements}
+━━━━━━━━━━━━━━━━
+Please contact me regarding this enquiry.
+Thank you.
+Nadodigal Holidays`;
+
+            const encoded = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${CONFIG.whatsapp}?text=${encoded}`;
+
+            showToast("Opening WhatsApp with your enquiry...");
+
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 800);
+        }
+
+        // Toast Alert System
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('hide');
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.classList.add('hide');
+            }, 3500);
+        }
+
+        // Scroll Counter Animations
+        function initCounters() {
+            const counters = document.querySelectorAll('.counter');
+            let animated = false;
+
+            window.addEventListener('scroll', () => {
+                const section = document.querySelector('.counter');
+                if(!section) return;
+                const pos = section.getBoundingClientRect().top;
+                const winH = window.innerHeight;
+
+                if (pos < winH && !animated) {
+                    animated = true;
+                    counters.forEach(c => {
+                        const target = +c.getAttribute('data-target');
+                        let count = 0;
+                        const inc = target / 50;
+                        const update = () => {
+                            count += inc;
+                            if (count < target) {
+                                c.innerText = Math.ceil(count);
+                                setTimeout(update, 30);
+                            } else {
+                                c.innerText = target;
+                            }
+                        };
+                        update();
+                    });
+                }
+            });
+        }
+
+        // Scroll Spy & Back to Top
+        function initScrollSpy() {
+            const topBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    topBtn.classList.remove('hidden');
+                    topBtn.classList.add('flex');
+                } else {
+                    topBtn.classList.add('hidden');
+                    topBtn.classList.remove('flex');
+                }
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
